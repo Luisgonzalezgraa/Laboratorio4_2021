@@ -22,6 +22,7 @@ public class RedSocialView {
 	private String name;
 	private JTable table;
 	private JTable table_1;
+	private PublicacionView publi = new PublicacionView();
 	public String getName() {
 		return name;
 	}
@@ -115,6 +116,11 @@ public class RedSocialView {
 		frame.getContentPane().add(Compartir);
 		
 		JButton Publicar = new JButton("Publicar");
+		Publicar.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				publi.getFrame().setVisible(true);
+			}
+		});
 		Publicar.setBounds(435, 358, 85, 21);
 		frame.getContentPane().add(Publicar);
 	}
